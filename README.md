@@ -4,10 +4,49 @@
 
 ## Требования
 
-- Docker
+- Docker Engine
+- Docker Compose
 - Доступ к терминалу
 
-## Сборка образа
+## Запуск проекта
+
+Скачайте репозиторий:
 
 ```bash
-docker build -t my-first-site:v1 .
+git clone https://github.com/TopoJiJio/my-first-docker-site.git
+```
+
+Перейдите в папку проекта:
+
+```bash
+cd my-first-docker-site
+```
+
+Соберите образ и запустите сайт:
+
+```bash
+docker compose up -d --build
+```
+
+Откройте сайт в браузере:
+
+http://localhost:8081
+
+## Проверка состояния
+
+```bash
+docker compose ps
+```
+
+## Просмотр логов
+
+```bash
+docker compose logs
+```
+
+## Остановка сайта
+
+```bash
+docker compose down
+```
+
